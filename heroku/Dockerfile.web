@@ -1,0 +1,5 @@
+FROM hoto17296/redash-base
+
+ENV REDASH_WEB_WORKERS 1
+
+CMD ["server"]

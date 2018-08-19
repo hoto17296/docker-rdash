@@ -18,6 +18,8 @@ RUN apk add --no-cache --virtual .build-deps \
     && npm install && npm run build && rm -rf node_modules \
     && apk del .build-deps
 
-RUN echo -e 'gunicorn -b 0.0.0.0:${PORT:-5000} -w${REDASH_WEB_WORKERS:-4} redash.wsgi:app' > /run.sh
+ADD entrypoint.sh /
 
-CMD ["sh", "/run.sh"]
+ENTRYPOINT ["sh", "/entrypoint.sh"]
+
+CMD ["sh"]

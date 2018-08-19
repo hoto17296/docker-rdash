@@ -1,0 +1,5 @@
+FROM hoto17296/redash-base
+
+ENV QUEUES queries,scheduled_queries,celery
+
+CMD ["scheduler"]

@@ -32,7 +32,7 @@ $ docker build . -t redash
 $ docker run --rm -it \
     -e REDASH_DATABASE_URL=postgres://username:password@hostname:port/database \
     -e REDASH_REDIS_URL=redis://username:password@hostname:port/database \
-    redash /app/manage.py database create_tables
+    redash create_tables
 ```
 
 ## Run
@@ -41,7 +41,7 @@ $ docker run --rm -d \
     -p 5000:5000 \
     -e REDASH_DATABASE_URL=postgres://username:password@hostname:port/database \
     -e REDASH_REDIS_URL=redis://username:password@hostname:port/database \
-    redash
+    redash (server|scheduler|worker)
 ```
 
 ## Environment variables
