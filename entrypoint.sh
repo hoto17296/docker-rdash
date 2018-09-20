@@ -1,5 +1,9 @@
 #!/bin/sh
 
+# Heroku Add-ons Support
+REDASH_DATABASE_URL=${REDASH_DATABASE_URL:-${DATABASE_URL}}
+REDASH_REDIS_URL=${REDASH_REDIS_URL:-${REDIS_URL}}
+
 case $1 in
 
   create_db)
