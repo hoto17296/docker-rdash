@@ -6,7 +6,7 @@
 
 ## Deploy
 ``` console
+$ docker pull hoto17296/redash-base
 $ heroku container:push --recursive
-$ heroku container:release web
-$ heroku container:release worker
+$ heroku container:release web worker
 ```
