@@ -1,8 +1,8 @@
 FROM python:2-alpine
 
-ENV REDASH_VERSION=4.0.2
+ENV REDASH_VERSION=5.0.1
 
-RUN wget https://github.com/getredash/redash/archive/v${REDASH_VERSION}.tar.gz -O redash.tar.gz \
+RUN wget https://github.com/getredash/redash/archive/v${REDASH_VERSION}.tar.gz -O redash.tar.gz -q \
     && tar xzf redash.tar.gz \
     && rm -f redash.tar.gz \
     && mv redash-${REDASH_VERSION} /app
