@@ -32,7 +32,7 @@ $ docker build . -t redash
 $ docker run --rm -it \
     -e REDASH_DATABASE_URL=postgres://username:password@hostname:port/database \
     -e REDASH_REDIS_URL=redis://username:password@hostname:port/database \
-    redash create_tables
+    redash manage database create_tables
 ```
 
 ## Run

@@ -6,8 +6,9 @@ REDASH_REDIS_URL=${REDASH_REDIS_URL:-${REDIS_URL}}
 
 case $1 in
 
-  create_db)
-    /app/manage.py database create_tables
+  manage)
+    shift
+    /app/manage.py $@
     ;;
 
   server)
